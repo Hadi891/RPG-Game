@@ -1,0 +1,110 @@
+body {
+  background-image: url(gameBackground.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: #0e0413;
+}
+
+#text {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#game {
+  max-width: 800px;
+  width: 700px;
+  height: 443px;
+  background-image: url("boxBackground2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#container{
+  padding-top: 130px;
+}
+
+#controls {
+  /* border: 1px black solid; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#stats {
+  /* border: 1px black solid; */
+  color: black;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#monsterStats {
+  display: none;
+  /* border: 1px black solid; */
+  color: white;
+  padding: 5px;
+  background-color: red;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat {
+  padding-right: 10px;
+}
+
+button {
+  height: 20px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px 5px 22px 5px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  perspective: 300px;
+  transform-style: preserve-3d;
+}
+
+button:hover {
+  color: #000;
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("door.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  transform-origin: center bottom;
+  transform: rotateX(0);
+  transition: all 0.3s ease;
+}
+
+button:hover::after {
+  transform: rotateX(-180deg);
+}
+
+#box{
+  margin-top: 25px;
+}
